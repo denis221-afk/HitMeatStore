@@ -1,5 +1,9 @@
+"use client";
 import React from "react";
 import { FaBagShopping } from "react-icons/fa6";
+import NavigationMobile from "./Navigation-mobille";
+import { CiMenuBurger } from "react-icons/ci";
+import { useShowNavigationMobile } from "./Hook/useShowNavigationMobile";
 
 const Items = [
   { title: "Магазин", id: 1 },
@@ -8,9 +12,10 @@ const Items = [
   { title: "Конткати", id: 4 },
 ];
 const Navigation = () => {
+  useShowNavigationMobile();
   return (
-    <nav className="navbar">
-      <ul className="flex gap-2 cursor-pointer text-gray-500">
+    <nav className="navbar relative h-10">
+      <ul className="gap-2 cursor-pointer text-gray-500 hidden md:flex ">
         {Items.map((li) => {
           return (
             <li
@@ -25,6 +30,10 @@ const Navigation = () => {
           <FaBagShopping color="red" size={20} cursor="pointer" />
         </li>
       </ul>
+      <div className="md:hidden cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 z-50">
+        <CiMenuBurger size={25} color="black" />
+      </div>
+      <NavigationMobile Items={Items} />
     </nav>
   );
 };

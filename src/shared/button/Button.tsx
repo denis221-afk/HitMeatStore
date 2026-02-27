@@ -1,14 +1,11 @@
+"use client";
 import React from "react";
 import { Button as ChakraButton } from "@chakra-ui/react";
+import type { IPropsButton } from "@/shared/button/type";
 
-interface IPropsButton {
-  title: string;
-  style?: React.CSSProperties;
-  _hover?: Partial<React.CSSProperties>;
-}
-const ButtonElement = ({ title, style, _hover }: IPropsButton) => {
+const ButtonElement = ({ title, styles, _hover }: IPropsButton) => {
   return (
-    <ChakraButton size="md" sx={style} _hover={_hover} width={200}>
+    <ChakraButton size="md" {...styles} _hover={_hover} width={200}>
       {title}
     </ChakraButton>
   );

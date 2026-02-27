@@ -10,10 +10,10 @@ const MainScrean = () => {
         alt="Dzerks"
         width={750}
         height={950}
-        className="rounded-r-2xl"
+        className="rounded-r-2xl !hidden md:!block"
       />
 
-      <section className="w-full max-w-3xl flex justify-center flex-col flex-1/2">
+      <section className="w-full max-w-3xl flex justify-center flex-col flex-1/2 items-center text-center md:items-start md:text-left">
         <h1 className="text-7xl text-gray-600 !text-7xl">
           <span className="text-red-600 text-7xl">M</span>EAT-HIT
         </h1>
@@ -26,8 +26,8 @@ const MainScrean = () => {
         </p>
         <ButtonElement
           title="Купити"
-          style={{ background: "red.500", color: "white", marginTop: "20px" }}
-          _hover={{ background: "red.400", color: "white" }}
+          styles={{ bg: "red.500", color: "white", mt: 20 }}
+          _hover={{ bg: "red.400", color: "white" }}
         />
       </section>
     </div>
