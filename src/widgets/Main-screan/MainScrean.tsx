@@ -26,8 +26,14 @@ const MainScrean = () => {
         </p>
         <ButtonElement
           title="Купити"
-          styles={{ bg: "red.500", color: "white", mt: 20 }}
-          _hover={{ bg: "red.400", color: "white" }}
+          styles={{
+            backgroundColor: "red",
+            color: "white",
+            marginTop: 20,
+            padding: "10px 20px",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
         />
       </section>
     </div>
