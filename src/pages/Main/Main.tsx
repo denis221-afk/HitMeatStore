@@ -4,6 +4,7 @@ import MainScrean from "@/widgets/Main-screan/MainScrean";
 import { ProductSlider } from "@/widgets/slider/ProductSlider";
 import type { ISlideItem } from "@/widgets/slider/type/type";
 import Filtered from "@/widgets/Filtered/Filtered";
+import MainCatalog from "@/widgets/MainCatalog/MainCatalog";
 const slide: ISlideItem[] = [
   {
     id: 1,
@@ -36,6 +37,7 @@ const Main = () => {
       <div className="py-16  flex justify-center w-full flex-1">
         <Filtered />
       </div>
+      <MainCatalog />
     </>
   );
 };
